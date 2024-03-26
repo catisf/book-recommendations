@@ -9,7 +9,6 @@
 
     <!-- add here any script we need to run -->
     <script src="../static/js/books_logic.js"></script>
-    <script src="../static/js/jquery.csv.js"></script>
 
 </head>
 
@@ -23,38 +22,102 @@
         <h2 id="Subtitle">
             Pick a book:
         </h2>
-        <h4>
+        <h3>
             Please select one of the books below and we will give you some recommendations of other books you might like. 
-        </h4>
+        </h3>
     </div>
 
     <!-- Books to choose from -->   
-    <div class="leftAlignedImage bookBox">              
+    <div class="bookBox">              
         <div class="coverWrapper" id="bookCover1">
-            <img alt="Miss Marple" title="" width="115" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <img alt="Miss Marple" title="" width="180" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
         </div>      
         <div class="coverWrapper" id="bookCover2">
-            <img alt="Miss Marple" title="" width="115" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <img alt="Miss Marple" title="" width="180" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
         </div>  
         <div class="coverWrapper" id="bookCover3">
-            <img alt="Miss Marple" title="" width="115" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <img alt="Miss Marple" title="" width="180" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
         </div>  
         <div class="coverWrapper" id="bookCover4">
-            <img alt="Miss Marple" title="" width="115" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <img alt="Miss Marple" title="" width="180" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
         </div>  
         <div class="coverWrapper" id="bookCover5">
-            <img alt="Miss Marple" title="" width="115" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <img alt="Miss Marple" title="" width="180" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
         </div>  
     </div>
+
+
+    <!-- Popup with book recommendations -->
+    <div class="popup" id="bookPopup">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <h2>Book Recommendation</h2>
+        <p>Here are some of the books we think you might like.</p>
+        <div class="recommendationWrapper" id="recommendation1">
+            <img alt="Miss Marple" title="" width="150" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
+        </div>  
+        <div class="recommendationWrapper" id="recommendation1">
+            <img alt="Miss Marple" title="" width="150" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
+        </div>  
+        <div class="recommendationWrapper" id="recommendation1">
+            <img alt="Miss Marple" title="" width="150" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
+        </div>  
+        <div class="recommendationWrapper" id="recommendation1">
+            <img alt="Miss Marple" title="" width="150" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
+        </div>  
+        <div class="recommendationWrapper" id="recommendation1">
+            <img alt="Miss Marple" title="" width="150" class="bookImage" src="http://books.google.com/books/content?id=a96qPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+            <div class="tooltip">
+                <span class="title-label">Title: </span><span class="title"></span><br>
+                <span class="author-label">Author: </span><span class="author"></span>
+            </div>
+        </div>  
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <br><br>
 
     <!-- "Show me more" button  -->   
     <div class="more-button">
         <button id="more">Show me other books</button>
     </div>
-
-    <p>
-
-    </p>
 
     <!-- Footer -->
     <footer>
