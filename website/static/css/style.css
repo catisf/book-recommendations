@@ -30,8 +30,8 @@ body {
 .tooltip {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.8);
-    color: rgb(74, 73, 73);
-    padding: 10px 20px;
+    color: rgb(50, 50, 50);
+    padding: 20px 20px;
     border-radius: 5px;
     visibility: hidden;
 }

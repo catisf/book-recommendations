@@ -22,7 +22,7 @@ data = pd.read_csv(data_path)
 # Save cleaned data to the database
 data.to_sql('data', engine, index=False, if_exists='replace')
 
-# Define a route to print data from the whole world
+# Define a route to print data 
 @app.route('/book_4_you')
 def book_4_you():
     try:

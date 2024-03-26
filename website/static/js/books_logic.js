@@ -1,10 +1,10 @@
-// Function to open the popup
+// Function to open the popup with recommendations
 function openPopup() {
     document.getElementById('bookPopup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
 }
 
-// Function to close the popup
+// Function to close the popup with recommendations
 function closePopup() {
     document.getElementById('bookPopup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
@@ -12,7 +12,7 @@ function closePopup() {
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    // Fetch data from the /print_sample_data_uk route for the United Kingdom
+    // Fetch data from the /books_4_you route
     fetch('/book_4_you')
         .then(response => response.json())
         .then(data => {
@@ -21,31 +21,24 @@ document.addEventListener("DOMContentLoaded", function(){
    
         // Get all coverWrapper elements
         const coverWrappers = document.querySelectorAll('.coverWrapper');
-
-        // Array containing book data (URLs and alt texts)
-        const books = cleanedData.map((book, index) => {
-            return {
-                alt: book.title, // Use book title as alt text
-                src: book.thumbnail // Use thumbnail URL as src
-            };
-        });
-    
-        // Function to select a random book and set its attributes
+   
+        // Function to select 5 random books
         function selectRandomBooks() {
             // Generate an array of five unique random indices within the range of the books array
             const randomIndices = [];
             while (randomIndices.length < 5) {
-                const randomIndex = Math.floor(Math.random() * books.length);
+                const randomIndex = Math.floor(Math.random() * cleanedData.length);
                 if (!randomIndices.includes(randomIndex)) {
                     randomIndices.push(randomIndex);
                 }
             }
         
-            // Loop through coverWrapper elements and set src and alt attributes
+            // Loop through coverWrapper elements and set src and alt attributes,
+            // as well as tooltip details
             coverWrappers.forEach((coverWrapper, index) => {
                 // Get the random book corresponding to the current index
                 const bookData = cleanedData[randomIndices[index]];
-                // Set src and alt attributes for the selected book cover
+                // Set src and alt attributes for the selected book cover and the tooltip info
                 const bookImage = coverWrapper.querySelector('.bookImage');
                 const tooltip = coverWrapper.querySelector('.tooltip');
                 bookImage.src = bookData.thumbnail;
@@ -74,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(){
             });
         }
 
-        // Call the function to select a random book
+        // Call the function to select random books
         selectRandomBooks();
 
         // Loop through each coverWrapper element and add a click event listener
