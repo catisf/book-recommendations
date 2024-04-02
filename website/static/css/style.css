@@ -36,6 +36,21 @@ body {
     visibility: hidden;
 }
 
+.recommendationWrapper {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tooltipRec {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(50, 50, 50);
+    padding: 20px 20px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
 .popup {
     display: none;
     position: fixed;
@@ -48,12 +63,6 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 9999;
-}
-
-.recommendationWrapper {
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
 }
 
 .overlay {
