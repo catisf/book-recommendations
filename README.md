@@ -2,12 +2,12 @@
 Project 4 of UoB Data Analytics bootcamp
 
 ## Contents:
-1. [Overview]
-2. [Project development]
-3. [Set up and execution]
-4. [Data source]
-5. [Code source]
-6. [Authors]
+1. [Overview](https://github.com/catisf/book-recommendations/blob/main/README.md#1-overview)
+2. [Project development](https://github.com/catisf/book-recommendations/blob/main/README.md#2-project-development)
+3. [Set up and execution](https://github.com/catisf/book-recommendations/blob/main/README.md#3-set-up-and-execution)
+4. [Data source](https://github.com/catisf/book-recommendations/blob/main/README.md#4-data-source)
+5. [Code source](https://github.com/catisf/book-recommendations/blob/main/README.md#5-code-source)
+6. [Authors](https://github.com/catisf/book-recommendations/blob/main/README.md#6-authors)
 
 ## 1. Overview:
 
