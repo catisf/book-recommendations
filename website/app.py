@@ -14,7 +14,7 @@ app = Flask(__name__)
 engine = create_engine('sqlite:///books_dataset.db')
 
 # Define file path using environment variables or relative path
-data_path = os.getenv('data_path', 'clustered_data.csv')
+data_path = os.getenv('data_path', 'clustered_data_no_outliers.csv')
 
 # Load cleaned data from CSV file
 data = pd.read_csv(data_path)
