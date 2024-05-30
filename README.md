@@ -1,5 +1,5 @@
 # book-recommendations
-Project 4 of UoB Data Analytics bootcamp
+Project 4 of UoB Data Analytics bootcamp - Machine Learning
 
 ## Contents:
 1. [Overview](https://github.com/catisf/book-recommendations/blob/main/README.md#1-overview)
